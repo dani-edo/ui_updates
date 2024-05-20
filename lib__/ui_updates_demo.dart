@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ui_updates/demo_buttons.dart';
+import '../lib__/demo_button.dart';
 
 class UIUpdatesDemo extends StatelessWidget {
   const UIUpdatesDemo({super.key});
@@ -7,13 +7,13 @@ class UIUpdatesDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     print('UIUpdatesDemo BUILD called');
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
+    return const Padding(
+      padding: EdgeInsets.all(8.0),
       child: Center(
         child: Column(
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.center,
-          children: const [
+          children: [
             Text(
               'Every Flutter developer should have a basic understanding of Flutter\'s internals!',
               textAlign: TextAlign.center,
@@ -25,7 +25,7 @@ class UIUpdatesDemo extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
             SizedBox(height: 24),
-            DemoButtons(),
+            Expanded(child: DemoButton())
           ],
         ),
       ),
